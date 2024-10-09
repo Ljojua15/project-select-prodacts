@@ -11,4 +11,8 @@ export class LocationsService {
   getAllLocations() {
     return this.http.get<Location[]>(this.url);
   }
+
+  createNewProdact(newProdact: Location) {
+    return this.http.post<Location>(this.url, newProdact);
+  }
 }
