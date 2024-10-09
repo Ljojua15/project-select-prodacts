@@ -1,10 +1,44 @@
-<div>
-  <input type="text" [(ngModel)]="newProdactsForm.id">
-  <input type="text" [(ngModel)]="newProdactsForm.name">
-  <input type="text" [(ngModel)]="newProdactsForm.city">
-  <input type="text" [(ngModel)]="newProdactsForm.state">
-  <input type="text" [(ngModel)]="newProdactsForm.photo">
-  <input type="text" [(ngModel)]="newProdactsForm.availableUnits">
-  <input type="text" [(ngModel)]="newProdactsForm.wifi">
-  <input type="text" [(ngModel)]="newProdactsForm.laundry">
+<div class="add">
+  <div>
+    <div>
+      <label for="id">ID</label>
+      <input type="text" [(ngModel)]="newProdactsForm.id" id="id">
+    </div>
+
+    <div>
+      <label for="name">Name</label>
+      <input type="text" [(ngModel)]="newProdactsForm.name" id="name">
+    </div>
+
+    <div>
+      <label for="city">City</label>
+      <input type="text" [(ngModel)]="newProdactsForm.city" id="city">
+    </div>
+
+    <div>
+      <label for="state">State</label>
+      <input type="text" [(ngModel)]="newProdactsForm.state" id="state">
+    </div>
+
+    <div>
+      <label for="photo">Photo URL</label>
+      <input type="text" [(ngModel)]="newProdactsForm.photo" id="photo">
+    </div>
+
+    <div>
+      <label for="availableUnits">Available Units</label>
+      <input type="number" [(ngModel)]="newProdactsForm.availableUnits" id="availableUnits">
+    </div>
+
+    <div>
+      <label for="wifi">Wi-Fi (true/false)</label>
+      <input type="text" [(ngModel)]="newProdactsForm.wifi" id="wifi">
+    </div>
+
+    <div>
+      <label for="laundry">Laundry (true/false)</label>
+      <input type="text" [(ngModel)]="newProdactsForm.laundry" id="laundry">
+    </div>
+  </div>
+  <button>UPDATE DATA</button>
 </div>
