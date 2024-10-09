@@ -1,0 +1,17 @@
+<div class="cards" *ngIf="products$ | async as data">
+  <div class="cards__content" *ngFor="let item of data; index as i" >
+    <div class="cards__content--id">{{item.id}}</div>
+    <span class="cards__content--name">NAME:<p>{{item.name}}</p></span>
+    <span class="cards__content--city">CITY:<p>{{item.city}}/{{item.state}}</p></span>
+    <span class="cards__content--avalible">AVALIBLE:<p>{{item.availableUnits}}</p></span>
+    <div class="cards__content--bolean">
+      <img [src]="item.wifi ? 'https://img.icons8.com/?size=100&id=9922&format=png&color=000000':'https://img.icons8.com/?size=100&id=zmYEL4E7wVC3&format=png&color=000000'" alt="">
+      <img [src]="!item.laundry? 'https://img.icons8.com/?size=100&id=73ghG6lv5kZ7&format=png&color=000000' : 'https://img.icons8.com/?size=100&id=3s6BVI9abExS&format=png&color=000000'" alt="">
+    </div>
+    <div class="cards__content--btns">
+      <button>UPDATE</button>
+      <button>DELETE</button>
+    </div>
+
+  </div>
+</div>

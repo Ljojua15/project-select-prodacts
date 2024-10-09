@@ -1,0 +1,75 @@
+.cards{
+  width: 900px;
+  height: 600px;
+  border: 2px solid red;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  &__content{
+    width: 250px;
+    height: 300px;
+    border: 2px solid blue;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    &--id{
+      position: absolute;
+      background-color: red;
+      top: 4px;
+      right: 4px;
+      border-radius: 12px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: green;
+      font-weight: bold;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    span{
+      font-size: 16px;
+      color: red;
+      font-style: italic;
+      p{
+        font-size: 14px;
+        color: black;
+      }
+    }
+    &--bolean, &--btns{
+      width: 99%;
+      height: 50px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      img{
+        width: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      button{
+        cursor: pointer;
+        border: unset;
+        width: 90px;
+        height: 30px;
+        border-radius: 10px;
+        font-family: Georgia, 'Times New Roman', Times, serif
+      }
+      :nth-child(1){
+        background-color: blue;
+        color: bisque;
+
+      }
+      :nth-child(2){
+        background-color: red;
+      }
+    }
+  }
+
+}
