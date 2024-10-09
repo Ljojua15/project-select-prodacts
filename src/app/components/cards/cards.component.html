@@ -1,5 +1,5 @@
 <div class="cards" *ngIf="products$ | async as data">
-  <div class="cards__content" *ngFor="let item of data; index as i" >
+  <div class="cards__content" [style.backgroundImage]="'url(' + item.photo + ')'" *ngFor="let item of data; index as i" >
     <div class="cards__content--id">{{item.id}}</div>
     <span class="cards__content--name">NAME:<p>{{item.name}}</p></span>
     <span class="cards__content--city">CITY:<p>{{item.city}}/{{item.state}}</p></span>
@@ -15,3 +15,4 @@
 
   </div>
 </div>
+<button><a routerLink="/add" (click)="onClick()">ADDPRODUCT</a></button>
