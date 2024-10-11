@@ -15,4 +15,8 @@ export class LocationsService {
   createNewProdact(newProdact: Location) {
     return this.http.post<Location>(this.url, newProdact);
   }
+
+  getProductsById(id: number) {
+    return this.http.get<Location>(`${this.url}/${id}`);
+  }
 }

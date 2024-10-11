@@ -1,0 +1,24 @@
+<div class="bank">
+  <div class="bank__card">
+    <app-credit-card [test]="cardInfo" />
+  </div>
+  <div class="bank__form">
+    <div class="bank__form__lines">
+      <label for="CARDHOLDERNAME">CARDHOLDERNAME</label>
+      <input class="name" type="text" [(ngModel)]="cardInfo.placeHolder">
+      <label for="CARDHOLDERNAME">CARD NUMBEER</label>
+      <input class="no-arrows name" type="number" [(ngModel)]="cardInfo.code">
+      <span>
+        <label for="CARDHOLDERNAME">EXP. DATE (MM/YY)</label>
+        <label for="CARDHOLDERNAME">CVC</label>
+      </span>
+      <span>
+        <input class="no-arrows date" type="number" [(ngModel)]="cardInfo.mm">
+        <input class="no-arrows date" type="number" [(ngModel)]="cardInfo.yy">
+        <input class="no-arrows cvc" type="number" [(ngModel)]="cardInfo.cvc">
+      </span>
+      <button (click)="onConfirm()">Confirm</button>
+    </div>
+  </div>
+</div>
+
