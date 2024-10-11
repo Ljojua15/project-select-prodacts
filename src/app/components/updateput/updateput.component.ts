@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Location } from '../../interfaces/locations';
+import { Router } from '@angular/router';
+import { LocationsService } from '../../services/locations.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-updateput',
@@ -8,9 +11,8 @@ import { Location } from '../../interfaces/locations';
   templateUrl: './updateput.component.html',
   styleUrl: './updateput.component.scss',
 })
-export class UpdateputComponent {
+export class UpdateputComponent implements OnInit {
   newProdactsForm: Location = {
-    id: 0,
     name: '',
     city: '',
     state: '',
@@ -19,4 +21,10 @@ export class UpdateputComponent {
     wifi: true,
     laundry: true,
   };
+
+  constructor(
+    private LocationService: LocationsService,
+    private router: Router
+  ) {}
+  ngOnInit(): void {}
 }
